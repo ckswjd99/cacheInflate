@@ -1,3 +1,5 @@
+#define TEST_ITER 1024
+
 #include "stdio.h"
 #include "stdlib.h"
 
@@ -9,12 +11,15 @@ int main(int argc, char *argv[]) {
   }
 
   int loopSize = atoi(argv[1]);
-  char* mem = malloc(sizeof(char)*loopSize);
-
   printf("testing size %d\n", loopSize);
-  
-  for(int i=0; i<loopSize; i++) {
-    mem[i];
+
+  for (int i=0; i<TEST_ITER; i++) {
+    char* mem = malloc(sizeof(char)*loopSize);
+    
+    for(int j=0; j<loopSize; j++) {
+      mem[j];
+    }
+
   }
 
 
