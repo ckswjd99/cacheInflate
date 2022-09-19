@@ -20,6 +20,9 @@ int main(int argc, char *argv[]) {
     for(int j=0; j<loopSize; j++) {
       mem[j] = 0;
     }
+    for(int j=0; j<loopSize; j++) {
+      mem[j] = 0;
+    }
 
     free(mem);
   }
