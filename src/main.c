@@ -11,9 +11,10 @@ int main(int argc, char *argv[]) {
   }
 
   int loopSize = atoi(argv[1]);
-  printf("testing size %d\n", loopSize);
+  int test_iter = argc == 3 ? atoi(argv[2]) : TEST_ITER;
+  printf("testing size %d, repeating %d\n", loopSize, test_iter);
 
-  for (int i=0; i<TEST_ITER; i++) {
+  for (int i=0; i<test_iter; i++) {
     char* mem = malloc(sizeof(char)*loopSize);
     
     for(int j=0; j<loopSize; j++) {
