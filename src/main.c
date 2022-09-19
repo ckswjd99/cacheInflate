@@ -18,7 +18,7 @@ int main(int argc, char *argv[]) {
     char* mem = malloc(sizeof(char)*loopSize);
     
     for(int j=0; j<loopSize; j++) {
-      mem[j];
+      mem[j] = 0;
     }
 
     free(mem);
